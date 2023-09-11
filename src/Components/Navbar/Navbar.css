@@ -1,0 +1,85 @@
+:root {
+  --header-backgroundColor: rgb(0, 0, 0);
+  --header-Color: rgb(253, 253, 253);
+}
+.nav-header {
+  height: 5rem;
+  background-color: var(--header-backgroundColor);
+  color: var(--header-Color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* position: sticky; */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+.sidebar-btn {
+  cursor: pointer;
+}
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo i {
+  margin-right: 1rem;
+}
+.nav-logo h2 {
+  font-size: 2rem;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 0rem 0.9rem;
+  gap: 1rem;
+  width: 35%;
+  overflow: auto;
+  border-radius: 5rem;
+  background-color: var(--header-Color);
+}
+.search-container i {
+  color: var(--header-backgroundColor);
+  cursor: pointer;
+}
+.search-container input {
+  border: none;
+  padding: 0.8rem;
+  width: 100%;
+}
+.nav-icons {
+  display: flex;
+}
+.nav-icons div {
+  margin-right: 2rem;
+}
+.sign-in p {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.heart-badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.heart-badge:hover {
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  background-color: rgb(211, 209, 209);
+  color: var(--header-backgroundColor);
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -0.8rem;
+  right: -3rem;
+  border-radius: 50%;
+  font-weight: 600;
+}
+.account:hover {
+  cursor: pointer;
+}

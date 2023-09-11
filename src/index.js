@@ -1,17 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { makeServer } from "./server";
+import { CategoryProvider } from "./Context/CategoryContext";
+import { BrowserRouter } from "react-router-dom";
+import { ProductProvider } from "./Context/ProductContext";
+import { FilterProvider } from "./Context/FilterContext";
+import { CartProvider } from "./Context/CartContext";
+import { WishProvider } from "./Context/WishListContext";
+import { SidebarTogglerProvider } from "./Context/SidebarToggleContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// Call make Server
+makeServer();
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <SidebarTogglerProvider>
+      <WishProvider>
+        <CartProvider>
+          <FilterProvider>
+            <ProductProvider>
+              <CategoryProvider>
+                <BrowserRouter>
+                  <App />
+                </BrowserRouter>
+              </CategoryProvider>
+            </ProductProvider>
+          </FilterProvider>
+        </CartProvider>
+      </WishProvider>
+    </SidebarTogglerProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

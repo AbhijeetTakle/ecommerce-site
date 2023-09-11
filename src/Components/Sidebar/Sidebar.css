@@ -1,0 +1,86 @@
+.main {
+  /* padding-bottom: 1rem; */
+  flex-grow: 1;
+  min-height: 100vh;
+}
+.filter-bar {
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  left: 0;
+  width: 300px;
+  margin-top: 5rem;
+  padding-top: 30px;
+  padding-right: 1rem;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-bottom: 10rem;
+  border-right-style: solid;
+  background-color: white;
+}
+.filter-head {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-head i {
+  cursor: pointer;
+}
+.filter-bar h3 {
+  margin-left: 4rem;
+}
+.filter-bar h3 span {
+  color: gray;
+}
+.filter-bar h4 {
+  margin-top: 1rem;
+  font-size: 20px;
+}
+.size {
+  height: 8rem;
+  overflow-y: scroll;
+}
+.filter-by-size {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 4rem;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+.price-range {
+  margin: 1rem 2rem;
+  display: flex;
+  width: 13rem;
+}
+.price-range-star {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 2rem;
+}
+
+.range {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+.radio {
+  cursor: pointer;
+}
+.apply {
+  margin-bottom: 15rem;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .shoe-card {
+    width: 20rem;
+    height: 23rem;
+  }
+}
